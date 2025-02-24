@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Game 1",
+      "hasSpiders": false,
+      "description": "Game 1 does not have spiders.",
+      "image": "images/game1.jpg"
+    },
+    {
+      "title": "Game 2",
+      "hasSpiders": true,
+      "description": "Game 2 contains spiders.",
+      "image": "images/game2.jpg"
+    },
+    {
+      "title": "Game 3",
+      "hasSpiders": false,
+      "description": "Game 3 does not have spiders.",
+      "image": "images/game3.jpg"
+    }
+  ]
+  
