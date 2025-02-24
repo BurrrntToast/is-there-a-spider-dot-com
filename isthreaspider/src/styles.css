@@ -1,50 +1,84 @@
+/* set global styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* style for the main container */
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* style for the main title */
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* style for the search input */
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* style for search results container */
+.results {
+  text-align: left;
+}
+
+/* style for each game result item */
+.result-item {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+  color: black;
+}
+
+/* change background on hover for better user experience */
+.result-item:hover {
+  background-color: #f0f0f0;
+}
+
   
-  .container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+  .game-container {
     text-align: center;
+    padding: 20px;
   }
   
-  .title {
-    font-size: 24px;
+  .game-title {
+    font-size: 28px;
     margin-bottom: 10px;
   }
   
-  .search-bar {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
+  .game-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
   }
   
-  .results {
-    text-align: left;
+  .game-description {
+    font-size: 18px;
   }
   
-  .result-item {
-    display: block;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    text-decoration: none;
-    color: black;
-  }
-  
-  .result-item:hover {
-    background-color: #f0f0f0;
+  .game-spiders {
+    font-weight: bold;
+    color: red;
   }
   
