@@ -8,7 +8,7 @@ export default function GamePage() {
 
   // fetch game data from json
   useEffect(() => {
-    fetch("/is-there-a-spider-dot-com/games.json")
+    fetch(`${process.env.PUBLIC_URL}/games.json`)
       .then(response => response.json())
       .then(data => {
         const foundGame = data.find(g => g.title.replace(/\s+/g, "-").toLowerCase() === gameTitle);

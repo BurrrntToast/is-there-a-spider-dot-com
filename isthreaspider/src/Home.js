@@ -8,7 +8,7 @@ export default function Home() {
 
   // fetch game data from the json file
   useEffect(() => {
-    fetch("/is-there-a-spider-dot-com/games.json")
+    fetch(`${process.env.PUBLIC_URL}/games.json`)
       .then(response => response.json())
       .then(data => setGames(data));
   }, []);

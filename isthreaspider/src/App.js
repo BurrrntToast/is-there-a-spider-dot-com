@@ -12,18 +12,3 @@ export default function App() {
     </Router>
   );
 }
-
-
-
-// import { BrowserRouter } from 'react-router-dom';
-
-// function App() {
-//   // Defaults to '/' if PUBLIC_URL is not set
-//   const basename = process.env.PUBLIC_URL || '/';
-
-//   return (
-//     <BrowserRouter basename={basename}>
-//       {/* Your Routes */}
-//     </BrowserRouter>
-//   );
-// }
