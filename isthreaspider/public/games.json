@@ -1,21 +1,21 @@
 [
     {
-      "title": "Game 1",
+      "title": "Minecraft",
       "hasSpiders": false,
       "description": "Game 1 does not have spiders.",
-      "image": "images/game1.jpg"
+      "image": "images/minecraft.jpg"
     },
     {
-      "title": "Game 2",
+      "title": "GTA V",
       "hasSpiders": true,
       "description": "Game 2 contains spiders.",
-      "image": "images/game2.jpg"
+      "image": "images/gta-v.jpg"
     },
     {
-      "title": "Game 3",
+      "title": "Rust",
       "hasSpiders": false,
-      "description": "Game 3 does not have spiders.",
-      "image": "images/game3.jpg"
+      "description": "title does not have spiders.",
+      "image": "images/rust.jpg"
     }
   ]
   
