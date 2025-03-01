@@ -27,6 +27,14 @@ body {
   margin-bottom: 10px;
 }
 
+/* style for the search container */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 /* style for the search input */
 .search-bar {
   width: 100%;
@@ -36,9 +44,17 @@ body {
   margin-bottom: 10px;
 }
 
-/* style for search results container */
-.results {
-  text-align: left;
+/* style for search results dropdown */
+.search-results {
+  position: absolute;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
 }
 
 /* style for each game result item */
@@ -48,6 +64,7 @@ body {
   border-bottom: 1px solid #ddd;
   text-decoration: none;
   color: black;
+  background: white;
 }
 
 /* change background on hover for better user experience */
@@ -55,30 +72,34 @@ body {
   background-color: #f0f0f0;
 }
 
-  
-  .game-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .game-title {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  
-  .game-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .game-description {
-    font-size: 18px;
-  }
-  
-  .game-spiders {
-    font-weight: bold;
-    color: red;
-  }
-  
+/* style for the game page container */
+.game-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* style for the game title */
+.game-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* style for the game image */
+.game-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* style for the game description */
+.game-description {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* style for the game spider information */
+.game-spiders {
+  font-weight: bold;
+  color: red;
+}
