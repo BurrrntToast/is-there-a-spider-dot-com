@@ -1,52 +1,99 @@
 /* set global styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: white;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: space-between;
+  min-height: 100vh;
+  text-align: center;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-/* style for the main container */
-.container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* navigation bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 15px;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
+  background: white;
+  z-index: 1000;
   text-align: center;
 }
 
-/* style for the main title */
-.title {
-  font-size: 24px;
-  margin-bottom: 10px;
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
-/* style for the search container */
+/* main content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 100px auto 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 5vw;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 2vw;
+  max-width: 80%;
+  margin-bottom: 50px;
+}
+
+/* search bar styling */
 .search-container {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin-bottom: 50px;
 }
 
-/* style for the search input */
 .search-bar {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  padding: 1vw;
+  border: 2px solid black;
+  border-radius: 50px;
+  font-size: 1.5vw;
+  text-align: center;
+  outline: none;
+  color: black;
 }
 
-/* style for search results dropdown */
+.search-bar::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+/* search results dropdown */
 .search-results {
   position: absolute;
+  top: 100%;
   width: 100%;
   background: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -57,7 +104,6 @@ body {
   z-index: 1000;
 }
 
-/* style for each game result item */
 .result-item {
   display: block;
   padding: 10px;
@@ -67,24 +113,36 @@ body {
   background: white;
 }
 
-/* change background on hover for better user experience */
 .result-item:hover {
   background-color: #f0f0f0;
 }
 
-/* style for the game page container */
+/* footer */
+.footer {
+  padding: 10px;
+  font-size: 1vw;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* game page styles */
 .game-container {
   text-align: center;
   padding: 20px;
+  width: 90%;
+  max-width: 800px;
 }
 
-/* style for the game title */
 .game-title {
-  font-size: 28px;
+  font-size: 4vw;
   margin-bottom: 10px;
 }
 
-/* style for the game image */
 .game-image {
   max-width: 100%;
   height: auto;
@@ -92,13 +150,11 @@ body {
   margin-bottom: 10px;
 }
 
-/* style for the game description */
 .game-description {
-  font-size: 18px;
+  font-size: 2vw;
   margin-bottom: 10px;
 }
 
-/* style for the game spider information */
 .game-spiders {
   font-weight: bold;
   color: red;
