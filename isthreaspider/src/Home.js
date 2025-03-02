@@ -6,6 +6,9 @@ export default function Home() {
   const [games, setGames] = useState([]);
   const [search, setSearch] = useState("");
   const [showResults, setShowResults] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
 
   useEffect(() => {
     fetch("/is-there-a-spider-dot-com/games.json")
@@ -13,17 +16,26 @@ export default function Home() {
       .then(data => setGames(data));
   }, []);
 
-  const filteredGames = games.filter(game =>
-    game.title.toLowerCase().includes(search.toLowerCase())
-  );
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [darkMode]);
 
   return (
     <div className="home-container">
       {/* Navigation Bar */}
       <nav className="navbar">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">CONTACT</a>
+        <div className="nav-links">
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="#">CONTACT</a>
+        </div>
+        <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
+          {darkMode ? "Light Mode" : "Dark Mode"}
+        </button>
       </nav>
 
       {/* Main Content */}
@@ -48,15 +60,19 @@ export default function Home() {
           />
           {showResults && (
             <div className="search-results">
-              {filteredGames.map((game, index) => (
-                <Link
-                  key={index}
-                  to={`/game/${game.title.replace(/\s+/g, "-").toLowerCase()}`}
-                  className="result-item"
-                >
-                  <strong>{game.title}</strong> - <span>{game.hasSpiders ? "yes, it has spiders" : "no, it does not have spiders"}</span>
-                </Link>
-              ))}
+              {games
+                .filter(game =>
+                  game.title.toLowerCase().includes(search.toLowerCase())
+                )
+                .map((game, index) => (
+                  <Link
+                    key={index}
+                    to={`/game/${game.title.replace(/\s+/g, "-").toLowerCase()}`}
+                    className="result-item"
+                  >
+                    <strong>{game.title}</strong> - <span>{game.hasSpiders ? "yes, it has spiders" : "no, it does not have spiders"}</span>
+                  </Link>
+                ))}
             </div>
           )}
         </div>

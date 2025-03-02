@@ -12,25 +12,41 @@ body {
   text-align: center;
   width: 100vw;
   overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* navigation bar */
+/* dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding: 15px;
-  font-size: 16px;
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   background: white;
   z-index: 1000;
   text-align: center;
+  padding: 15px;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .navbar {
+  background: #1e1e1e;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .navbar a {
@@ -39,7 +55,26 @@ body {
   font-weight: bold;
 }
 
-/* main content */
+body.dark-mode .navbar a {
+  color: white;
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 20px;
+  background: none;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .theme-toggle {
+  border: 1px solid white;
+  color: white;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -64,7 +99,6 @@ body {
   margin-bottom: 50px;
 }
 
-/* search bar styling */
 .search-container {
   position: relative;
   display: flex;
@@ -83,6 +117,7 @@ body {
   text-align: center;
   outline: none;
   color: black;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .search-bar::placeholder {
@@ -90,7 +125,16 @@ body {
   font-weight: bold;
 }
 
-/* search results dropdown */
+body.dark-mode .search-bar {
+  background-color: #333;
+  color: white;
+  border: 2px solid white;
+}
+
+body.dark-mode .search-bar::placeholder {
+  color: lightgray;
+}
+
 .search-results {
   position: absolute;
   top: 100%;
@@ -102,6 +146,11 @@ body {
   max-height: 200px;
   overflow-y: auto;
   z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .search-results {
+  background: #222;
 }
 
 .result-item {
@@ -117,7 +166,16 @@ body {
   background-color: #f0f0f0;
 }
 
-/* footer */
+body.dark-mode .result-item {
+  color: white;
+  background: #333;
+  border-bottom: 1px solid #444;
+}
+
+body.dark-mode .result-item:hover {
+  background: #444;
+}
+
 .footer {
   padding: 10px;
   font-size: 1vw;
@@ -128,34 +186,10 @@ body {
   width: 100%;
   max-width: 600px;
   text-align: center;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* game page styles */
-.game-container {
-  text-align: center;
-  padding: 20px;
-  width: 90%;
-  max-width: 800px;
-}
-
-.game-title {
-  font-size: 4vw;
-  margin-bottom: 10px;
-}
-
-.game-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.game-description {
-  font-size: 2vw;
-  margin-bottom: 10px;
-}
-
-.game-spiders {
-  font-weight: bold;
-  color: red;
+body.dark-mode .footer {
+  background: #1e1e1e;
+  color: white;
 }
