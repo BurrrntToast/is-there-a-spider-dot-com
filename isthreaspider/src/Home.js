@@ -34,7 +34,7 @@ export default function Home() {
           <a href="#">CONTACT</a>
         </div>
         <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? "Light Mode" : "Dark Mode"}
+          {darkMode ? "🌞" : "🌙"}
         </button>
       </nav>
 
@@ -79,7 +79,8 @@ export default function Home() {
       </div>
       
       {/* Footer */}
-      <footer className="footer">Made with Love</footer>
+      {/* <footer className="footer">made with ❤️ and hatred for spiders</footer> */}
+      <footer className="footer">made with hatred for spiders ❤️</footer>
     </div>
   );
 }

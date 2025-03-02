@@ -21,6 +21,7 @@ body.dark-mode {
   color: white;
 }
 
+/* navigation bar */
 .navbar {
   display: flex;
   justify-content: center;
@@ -35,11 +36,11 @@ body.dark-mode {
   z-index: 1000;
   text-align: center;
   padding: 15px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode .navbar {
-  background: #1e1e1e;
+  background: #121212;
 }
 
 .nav-links {
@@ -63,7 +64,7 @@ body.dark-mode .navbar a {
   position: absolute;
   right: 20px;
   background: none;
-  border: 1px solid black;
+  border: 0px solid black;
   padding: 5px 10px;
   font-size: 14px;
   cursor: pointer;
@@ -71,10 +72,11 @@ body.dark-mode .navbar a {
 }
 
 body.dark-mode .theme-toggle {
-  border: 1px solid white;
+  border: 0px solid white;
   color: white;
 }
 
+/* main content */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -99,6 +101,7 @@ body.dark-mode .theme-toggle {
   margin-bottom: 50px;
 }
 
+/* search bar */
 .search-container {
   position: relative;
   display: flex;
@@ -106,6 +109,7 @@ body.dark-mode .theme-toggle {
   width: 100%;
   max-width: 600px;
   margin-bottom: 50px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .search-bar {
@@ -126,7 +130,7 @@ body.dark-mode .theme-toggle {
 }
 
 body.dark-mode .search-bar {
-  background-color: #333;
+  background-color: #121212;
   color: white;
   border: 2px solid white;
 }
@@ -135,11 +139,12 @@ body.dark-mode .search-bar::placeholder {
   color: lightgray;
 }
 
+/* search results */
 .search-results {
   position: absolute;
   top: 100%;
   width: 100%;
-  background: white;
+  background: #d0d0d0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   overflow: hidden;
@@ -150,33 +155,42 @@ body.dark-mode .search-bar::placeholder {
 }
 
 body.dark-mode .search-results {
-  background: #222;
+  background: #2a2a2a;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .result-item {
   display: block;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0px solid #ddd;
   text-decoration: none;
   color: black;
   background: white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .result-item:hover {
   background-color: #f0f0f0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode .result-item {
   color: white;
-  background: #333;
-  border-bottom: 1px solid #444;
+  background: #1a1a1a;
+  border-bottom: 0px solid #444;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode .result-item:hover {
-  background: #444;
+  background: #222;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* footer */
 .footer {
+  color: black;
+  background: white;
   padding: 10px;
   font-size: 1vw;
   position: fixed;
@@ -190,6 +204,7 @@ body.dark-mode .result-item:hover {
 }
 
 body.dark-mode .footer {
-  background: #1e1e1e;
+  background: #121212;
   color: white;
+  transition: background-color 0.3s, color 0.3s;
 }
