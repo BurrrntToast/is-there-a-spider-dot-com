@@ -89,6 +89,10 @@ body.dark-mode .theme-toggle {
   text-align: center;
 }
 
+.game-container {
+  padding-top: 80px; /* Ensures content does not overlap navbar */
+}
+
 .title {
   font-size: 5vw;
   font-weight: bold;
