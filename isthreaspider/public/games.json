@@ -1,19 +1,25 @@
 [
     {
       "title": "Minecraft",
-      "hasSpiders": false,
+      "hasSpiders": "yes",
       "description": "Game 1 does not have spiders.",
       "image": "images/minecraft.jpg"
     },
     {
       "title": "GTA V",
-      "hasSpiders": true,
+      "hasSpiders": "no",
       "description": "Game 2 contains spiders.",
       "image": "images/gta-v.jpg"
     },
     {
       "title": "Rust",
-      "hasSpiders": false,
+      "hasSpiders": "no",
+      "description": "title does not have spiders.",
+      "image": "images/rust.jpg"
+    },
+    {
+      "title": "Valheim",
+      "hasSpiders": "no-but",
       "description": "title does not have spiders.",
       "image": "images/rust.jpg"
     }
